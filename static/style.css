@@ -1,0 +1,18 @@
+body {
+    background-color: aqua;
+    color: hwb(28 9% 9%);
+}
+
+.menu {
+    background-color: rgb(6, 231, 252);
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.country--box {
+    color: hwb(28 9% 9%);
+    display: flex;
+    justify-content: space-between;
+}

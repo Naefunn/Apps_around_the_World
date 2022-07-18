@@ -8,7 +8,7 @@ from models.user import User
 def select_all():
     countries = []
 
-    sql = "SELECT * FROM couuntries"
+    sql = "SELECT * FROM countries"
     results = run_sql(sql)
 
     for row in results:
@@ -22,5 +22,10 @@ def save(country):
     values = [country.name, country.description]
     results = run_sql(sql, values)
     country.id = results[0]['id']
-    # country.id = id
+    country.id = id
     return country
+
+def delete(id):
+    sql = "DELETE  FROM countries WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

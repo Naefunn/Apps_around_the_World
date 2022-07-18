@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav>
+    <ul class="menu">
+        <li><a href="/">Home </a></li>
+    </ul>
+</nav>
+<div class = "country--box">
+    {% for countries in all_countries  %}
+        <p>{{ countries.name }}-</p>
+        <p> {{ countries.description }}</p>
+        <p><a href="/countries/{{ countries.id }}">View Cities</a></p>
+        {% endfor %}
+</div>
+{% endblock content %}
