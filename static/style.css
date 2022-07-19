@@ -62,4 +62,34 @@ h2 {
 
 .home--page {
     text-align: center;
+    margin-top: 200px;
+    font-size: 200%;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.new--country--link{
+    display: flex;
+    justify-content: center;
+    font-size: larger;
 }
