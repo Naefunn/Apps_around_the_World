@@ -11,14 +11,14 @@ def select(id):
     values = [id]
     results = run_sql(sql, values)
     for row in results:
-        city = City(row['name'], row['description'], row['country_id'], row['id'] )
+        city = City(row['name'], row['description'], row['country_id'], row['visited'], row['id'] )
         cities.append(city)
     return cities
 
 
 def save(city):
-    sql = "INSERT INTO cities (name, description, country_id) VALUES (%s, %s, %s) RETURNING ID"
-    values = [city.name, city.description, city.country_id]
+    sql = "INSERT INTO cities (name, description, country_id, visited) VALUES (%s, %s, %s, %s) RETURNING ID"
+    values = [city.name, city.description, city.country_id, city.visited]
     results = run_sql(sql, values)
     city.id = results[0]['id']
     city.id = id

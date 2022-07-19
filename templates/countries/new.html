@@ -20,17 +20,16 @@
     <div>
         <label for="description">Description:</label>
         <textarea name="description" id="description" placeholder="Description" cols="20" rows="5" required></textarea>
-        <!-- <input type="text" id="description" name="description" placeholder="Description" required autofocus> -->
     </div>
 
-    <!-- <div>
-    <label for="user">User:</label>
-    <select id="user" name="user_id">
-    {% for user in all_users %}
-        <option value="{{ user.id }}">{{ user.first_name }}</option>
-    {% endfor %}
-    </select>
-    </div> -->
+    <div>
+        <label for="visited">Visted before?</label>
+        <select name="visited" id="visited">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+    
+    </div>
 
 <button type="submit">Add Country</button>
 

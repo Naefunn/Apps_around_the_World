@@ -18,7 +18,7 @@ def city(id):
     return render_template('cities/index.html', all_cities = cities)
 
 @countries_blueprint.route("/countries/<id>/delete", methods=['POST'])
-def delete_task(id):
+def delete_country(id):
     country_repository.delete(id)
     return redirect('/countries')
 
@@ -33,3 +33,4 @@ def create_country():
     country     = Country(name, description)
     country_repository.save(country)
     return redirect('/countries')
+

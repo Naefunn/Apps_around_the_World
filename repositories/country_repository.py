@@ -13,14 +13,14 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        country = Country(row['name'], row['description'], row['id'] )
+        country = Country(row['name'], row['description'], row['visited'], row['id'] )
         countries.append(country)
     return countries
 
 
 def save(country):
-    sql = "INSERT INTO countries (name, description) VALUES (%s, %s) RETURNING ID"
-    values = [country.name, country.description]
+    sql = "INSERT INTO countries (name, description, visited) VALUES (%s, %s, %s) RETURNING ID"
+    values = [country.name, country.description, country.visited]
     results = run_sql(sql, values)
     country.id = results[0]['id']
     country.id = id

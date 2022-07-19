@@ -8,13 +8,19 @@
 </nav>
 <div class = "country--box">
     {% for countries in all_countries  %}
-        <h2>{{ countries.name }}-</h2>
+        <h2>{{ countries.name }}</h2>
         <p> {{ countries.description }}</p>
         <p><a href="/countries/{{ countries.id }}">View Cities</a></p>
-        <button class="button" type="button">Edit</button>
-        <button class="button" type="button">Delete Destination</button>
+        <a href="/countries/{{ countries.id }}">Edit Country</a>
+        <form class="delete-form" action="/countries/{{countries.id}}/delete" method="POST">
+            <button class="button" value="Delete">Delete</button>
+        </form>
         
-        <button class="button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+        <div class="button">
+
+    
+        </div>
+        
         
     {% endfor %}
 </div>

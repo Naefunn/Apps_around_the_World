@@ -5,6 +5,7 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
 .menu {
     background-color: rgb(6, 231, 252);
     list-style: none;
@@ -27,6 +28,7 @@ body {
 .button {
     margin-left: 220px;
     margin-right: 220px;
+    margin-top: 10px;
 }
 
 .new-form{
@@ -35,5 +37,14 @@ body {
 
 .form-wrapper {
     text-align: center;
+    margin-top: 30px;
 }
 
+.trash-button{
+    display: contents;
+    font-size: 65%;
+}
+
+.link--city {
+    text-align: center;
+}

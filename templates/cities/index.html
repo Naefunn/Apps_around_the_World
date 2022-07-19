@@ -7,10 +7,19 @@
     </ul>
 </nav>
 
+
+
 <div class = "country--box">
     {% for city in all_cities  %}
-        <p>{{ city.name }}-</p>
+        <h2>{{ city.name }}</h2>
         <p>{{ city.description }}</p>
     {% endfor %}
 </div>
+
+<div class = "link--city">
+<h2>Add a new City!</h2>
+<a href="/cities/new">Click here to add a new City</a>
+</div>
+
+
 {% endblock content %}
