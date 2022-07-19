@@ -1,15 +1,19 @@
 body {
-    background-color: aqua;
-    color: hwb(28 9% 9%);
+    background-color: rgb(1, 16, 71);
+    color: hwb(0 100% 0%);
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.homepage-title {
+    color: orange;
+}
 
 .menu {
-    background-color: rgb(6, 231, 252);
+    background-color: orange;
     list-style: none;
     margin: 0;
+    padding: 20px;
 }
 
 .country--box {
@@ -88,8 +92,12 @@ select {
     box-sizing: border-box;
 }
 
-.new--country--link{
+.new-country-link{
     display: flex;
     justify-content: center;
     font-size: larger;
+    color: red;
+}
+.country {
+    text-transform: uppercase;
 }
