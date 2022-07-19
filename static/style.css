@@ -10,9 +10,6 @@ body {
     background-color: rgb(6, 231, 252);
     list-style: none;
     margin: 0;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-around; */
 }
 
 .country--box {
@@ -36,8 +33,10 @@ body {
 }
 
 .form-wrapper {
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
     margin-top: 30px;
+    text-align: justify;
 }
 
 .trash-button{
@@ -46,5 +45,21 @@ body {
 }
 
 .link--city {
+    text-align: center;
+}
+.edit--form {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.submit--button {
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.home--page {
     text-align: center;
 }

@@ -9,6 +9,7 @@
 <div class = "country--box">
     {% for countries in all_countries  %}
         <h2>{{ countries.name }}</h2>
+        <h3>Why do you want to visit?</h3>
         <p> {{ countries.description }}</p>
         <p><a href="/countries/{{ countries.id }}">View Cities</a></p>
         <a href="/countries/{{ countries.id }}/edit">Edit Country</a>

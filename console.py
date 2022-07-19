@@ -11,16 +11,16 @@ import repositories.country_repository as country_repository
 country1 = Country('Spain', "a country on Europe's Iberian Peninsula, includes 17 autonomous regions with diverse geography and cultures.", False)
 country_repository.save(country1)
 
-country2 = Country('France', " a country in Western Europe, encompasses medieval cities, alpine villages and Mediterranean beaches. Paris, its capital, is famed for its fashion houses, classical art museums including the Louvre and monuments like the Eiffel Tower.", False)
+country2 = Country('France', " I want to visit France to experience Paris and Lyon.", False)
 country_repository.save(country2)
 
 # country3 = Country('Germany', "a Western European country with a landscape of forests, rivers, mountain ranges and North Sea beaches. It has over 2 millennia of history. Berlin, its capital, is home to art and nightlife scenes, the Brandenburg Gate and many sites relating to WWII.")
 # country_repository.save(country3)
 
-city1 = City('Seville', "Seville is the capital and largest city of the Spanish autonomous community of Andalusia and the province of Seville.", 1, False )
+city1 = City('Seville', "I want to visit Seville because I love Flamenco!.", 1, False )
 city_repository.save(city1)
 
-city2 = City('Paris', "Paris is one of the most beautiful cities in the world. It is known worldwide for the Louvre Museum, Notre-Dame cathedral, and the Eiffel tower.", 2, False)
+city2 = City('Paris', "I'd like to visit paris to see the Eiffle Tower and the Lourve", 2, False)
 city_repository.save(city2)
 
 # city3 = City('Berlin', "Berlin, Germany's capital, dates to the 13th century.", 3)

@@ -1,23 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
+<nav>
+    <ul class="menu">
+        <li><a href="/">Home </a></li>
+        <li><a href="/countries">Countries </a></li>
+    </ul>
+</nav>
+<h2>Update your entry</h2>
 
+<div class="edit--form">
 <form action="/countries/{{countries.id}}/edit" method="post">
-
 <div>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" value="{{countries.name}}" required>
 </div>
-
 <div>
     <label for="description">Description:</label>
     <input type="text" id="description" name="description" value="{{countries.description}}" required autofocus>
 </div>
-
-
+<button class="submit--button" type="submit">Update Task</button>
+</form>
 </div>
 
-<button type="submit">Update Task</button>
-
-</form>
 
 {% endblock %}
