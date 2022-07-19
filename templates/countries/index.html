@@ -11,7 +11,7 @@
         <h2>{{ countries.name }}</h2>
         <p> {{ countries.description }}</p>
         <p><a href="/countries/{{ countries.id }}">View Cities</a></p>
-        <a href="/countries/{{ countries.id }}">Edit Country</a>
+        <a href="/countries/{{ countries.id }}/edit">Edit Country</a>
         <form class="delete-form" action="/countries/{{countries.id}}/delete" method="POST">
             <button class="button" value="Delete">Delete</button>
         </form>
