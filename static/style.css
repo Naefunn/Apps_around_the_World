@@ -1,18 +1,39 @@
 body {
     background-color: aqua;
     color: hwb(28 9% 9%);
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .menu {
     background-color: rgb(6, 231, 252);
     list-style: none;
-    display: flex;
+    margin: 0;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-around; */
 }
 
 .country--box {
     color: hwb(28 9% 9%);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 400px;
+    margin-right: 400px;
+    border: 5px, solid, red;
 }
+
+.button {
+    margin-left: 220px;
+    margin-right: 220px;
+}
+
+.new-form{
+    text-align: center;
+}
+
+.form-wrapper {
+    text-align: center;
+}
+

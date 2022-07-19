@@ -5,14 +5,11 @@ from models.country import Country
 from models.user import User
 
 
-def select(country_id):
+def select(id):
     cities = []
-
-    sql = "SELECT * from cities where country_id = %s"
-    values = [country_id]
-    results = run_sql(sql)
-    
-
+    sql = "SELECT * FROM cities WHERE id = %s"
+    values = [id]
+    results = run_sql(sql, values)
     for row in results:
         city = City(row['name'], row['description'], row['country_id'], row['id'] )
         cities.append(city)

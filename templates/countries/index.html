@@ -3,13 +3,19 @@
 <nav>
     <ul class="menu">
         <li><a href="/">Home </a></li>
+        <li><a href="/countries/new">Add a New Destination! </a></li>
     </ul>
 </nav>
 <div class = "country--box">
     {% for countries in all_countries  %}
-        <p>{{ countries.name }}-</p>
+        <h2>{{ countries.name }}-</h2>
         <p> {{ countries.description }}</p>
         <p><a href="/countries/{{ countries.id }}">View Cities</a></p>
-        {% endfor %}
+        <button class="button" type="button">Edit</button>
+        <button class="button" type="button">Delete Destination</button>
+        
+        <button class="button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+        
+    {% endfor %}
 </div>
 {% endblock content %}
