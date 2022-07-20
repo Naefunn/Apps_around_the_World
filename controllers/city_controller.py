@@ -9,7 +9,7 @@ import repositories.city_repository as city_repository
 
 cities_blueprint = Blueprint("cities", __name__)
 
-@cities_blueprint.route("/countries/<id>")
+@cities_blueprint.route("/countries/<id>/cities")
 def city(id):
     cities = city_repository.select_by_country(id)
     countries = country_repository.select(id)
@@ -29,10 +29,10 @@ def create_city(id):
     countries = country_repository.select(id)
     city = City(name, description, countries, visited)
     city_repository.save(city)
-    return redirect(f'/countries/{id}')
+    return redirect(f'/countries/{id}/cities')
 
 
-# @cities_blueprint.route("/countries/<id>/delete", methods=['POST'])
-# def delete_country(id):
-#     city_repository.delete(id)
-#     return redirect(f'/countries/{id}')
+@cities_blueprint.route("/countries/<id>/cities/delete", methods=['POST'])
+def delete_country(id):
+    city_repository.delete(id)
+    return redirect('/countries/<id>/cities')
