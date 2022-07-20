@@ -32,10 +32,20 @@ def create_city(id):
     return redirect(f'/countries/{id}/cities')
 
 
-@cities_blueprint.route("/countries/<id>/cities/delete", methods=['POST'])
+@cities_blueprint.route("/cities/<id>/delete", methods=['POST'])
 def delete_city(id):
     city = city_repository.select(id)
-    city_repository.delete(city)
-    return redirect(f'/countries/{id}/cities')
+    city_repository.delete(city.id)
+    return redirect(f'/countries')
 
+@cities_blueprint.route('/cities/visited')
+def show_visited_cities():
+    cities = city_repository.show_visited()
+    return render_template('cities/visited.html', all_cities = cities)
+
+
+@cities_blueprint.route('/cities/notvisited')
+def show_not_visited_cities():
+    cities = city_repository.show_not_visited()
+    return render_template('cities/notvisited.html', all_cities = cities)
 

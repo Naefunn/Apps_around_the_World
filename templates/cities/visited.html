@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<nav>
+    <ul class="menu">
+        <li><a href="/">Home </a></li>
+        <li><a href="/countries">Countries </a></li>
+        <li><a href="/cities/visited">Visited Cities</a></li>
+        <li><a href="/cities/notvisited">Cities Yet To See</a></li>
+    </ul>
+</nav>
+
+
+<div class = "country--box">
+    {% for city in all_cities  %}
+        <h2>{{ city.name }}</h2>
+        <p>{{ city.description }}</p>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}

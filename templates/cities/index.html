@@ -4,6 +4,8 @@
     <ul class="menu">
         <li><a href="/">Home </a></li>
         <li><a href="/countries">Countries </a></li>
+        <li><a href="/cities/visited">Visited Cities</a></li>
+        <li><a href="/cities/notvisited">Cities Yet To See</a></li>
     </ul>
 </nav>
 
@@ -13,7 +15,7 @@
     {% for city in all_cities  %}
         <h2>{{ city.name }}</h2>
         <p>{{ city.description }}</p>
-        <form class="delete-form" action="/countries/{{countries.id}}/cities/delete" method="POST">
+        <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
             <button class="button" value="Delete">Delete</button>
         </form>
     {% endfor %}
