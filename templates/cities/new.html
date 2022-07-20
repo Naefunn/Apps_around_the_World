@@ -10,7 +10,7 @@
     
 
 <div class="form-wrapper">
-    <form class ="new-form" action="" method="post">
+    <form class ="new-form" action="/countries/{{countries.id}}/save" method="post">
         
         <div>
             <label for="name">Name:</label>
@@ -18,7 +18,7 @@
         </div>
         
         <div>
-            <label for="description">Description:</label>
+            <label for="description">Why do you want to visit?</label>
             <textarea name="description" id="description" placeholder="Description" cols="20" rows="5" required></textarea>
         </div>
         
@@ -28,7 +28,6 @@
                 <option value="true">Yes</option>
                 <option value="false">No</option>
             </select>
-            
         </div>
         
         <button type="submit">Add City</button>

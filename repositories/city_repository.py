@@ -3,6 +3,17 @@ from db.run_sql import run_sql
 from models.city import City
 from models.country import Country
 from models.user import User
+import repositories.country_repository as country_repository
+
+def select_by_country(country_id):
+    cities = []
+    sql = "SELECT * FROM cities WHERE country_id = %s"
+    values = [country_id]
+    results = run_sql(sql, values)
+    for row in results:
+        city = City(row['name'], row['description'], row['country_id'], row['visited'], row['id'] )
+        cities.append(city)
+    return cities
 
 
 def select(id):
@@ -18,11 +29,11 @@ def select(id):
 
 def save(city):
     sql = "INSERT INTO cities (name, description, country_id, visited) VALUES (%s, %s, %s, %s) RETURNING ID"
-    values = [city.name, city.description, city.country_id, city.visited]
-    results = run_sql(sql, values)
-    city.id = results[0]['id']
+    values = [city.name, city.description, city.country_id.id, city.visited]
+    results = run_sql(sql, values) 
+    id = results[0]['id']
     city.id = id
-    return city
+    
 
 def delete(id):
     sql = "DELETE  FROM cities WHERE id = %s"
