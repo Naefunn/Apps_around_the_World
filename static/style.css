@@ -40,7 +40,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     margin-top: 30px;
-    text-align: justify;
+    text-align: left;
 }
 
 .trash-button{
@@ -51,10 +51,10 @@ body {
 .link--city {
     text-align: center;
 }
-.edit--form {
+/* .edit--form {
     text-align: center;
     padding-top: 30px;
-}
+} */
 
 .submit--button {
     margin-top: 10px;
@@ -100,4 +100,12 @@ select {
 }
 .country {
     text-transform: uppercase;
+}
+
+.label-text {
+    text-align: left;
+}
+
+a {
+    color: red;
 }
